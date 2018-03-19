@@ -140,13 +140,13 @@ app.post('/v1/oauth/revoke', function (req, res) {
     var bearerToken = req.token;
 
     if (bearerToken) {
-        connection.query('SELECT name,email from customer where Token=? LIMIT 1', bearerToken,
+        connection.query('SELECT name,email from customer where Token=? LIMIT 1', [bearerToken],
             function (error, results, fields) {
                 if (error) {
                     return res.status(400).json(helperCommon.formatRestApiSqlError(error));
                 }
 
-                connection.query('UPDATE customer SET Token=NULL where Token=?', bearerToken,
+                connection.query('UPDATE customer SET Token=NULL where Token=?', [bearerToken],
                     function (error, results, fields) {
                         if (error) {
                             return res.status(400).json(helperCommon.formatRestApiSqlError(error));
@@ -169,7 +169,7 @@ app.get('/v1/customer/me', function (req, res) {
     var bearerToken = req.token;
 
     if (bearerToken) {
-        connection.query('SELECT name,email from customer where Token=? LIMIT 1', bearerToken,
+        connection.query('SELECT name,email from customer where Token=? LIMIT 1', [bearerToken],
             function (error, results, fields) {
                 if (error) {
                     return res.status(400).json(helperCommon.formatRestApiSqlError(error));
