@@ -1,0 +1,15 @@
+{
+    "Server": {
+        "Host": "127.0.0.1",
+        "Port": 3000
+    },
+    "DbConfig": {
+        "MySqlMain": {
+            "Host": "sql12.freemysqlhosting.net",
+            "Port": 3306,
+            "User": "sql12226954",
+            "Password": "aeJfdYbfiB",
+            "Database": "sql12226954"
+        }
+    }
+}

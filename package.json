@@ -1,0 +1,22 @@
+{
+  "name": "login-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "basic-auth": "^2.0.0",
+    "body-parser": "^1.18.2",
+    "config": "^1.30.0",
+    "email-validator": "^1.1.1",
+    "express": "^4.16.3",
+    "express-bearer-token": "^2.1.1",
+    "http": "0.0.0",
+    "mysql": "^2.15.0",
+    "uuid": "^3.2.1"
+  }
+}
